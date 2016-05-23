@@ -2,6 +2,22 @@
 
 This is a PHP test that will help show your knowledge with creating APIs and dealing with videos.
 
+## Setup guides
+
+### If you're comfortable with git...
+
+1. Fork it
+2. Clone it
+3. Commit changes to your own fork
+4. Send link of your repo, and we will clone (or download) it for review.
+
+### If you're not comfortable with git...
+
+1. Click "Downloads"
+2. Click "Download repository"
+3. Make changes
+4. Once finished, zip it up and send via email
+
 # The Task
 
 Your task is to create a simple API application using the Lumen Framework. The API should have a single endpoint, but should be written with future endpoints in mind. 
