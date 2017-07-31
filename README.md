@@ -46,10 +46,10 @@ Once you have completed, you can submit it by creating a public repository on gi
 # Help
 
 1. https://github.com/JamesHeinrich/getID3
-2. https://lumen.laravel.com/docs/5.2
-3. https://lumen.laravel.com/docs/5.2/responses#json-responses
-4. https://lumen.laravel.com/docs/5.2/requests#files
+2. https://lumen.laravel.com/docs/5.4
+3. https://lumen.laravel.com/docs/5.4/responses#json-responses
+4. https://lumen.laravel.com/docs/5.4/requests#files
 5. https://github.com/JamesHeinrich/getID3/blob/master/structure.txt
 6. https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-2-coding-style-guide.md
-7. https://lumen.laravel.com/docs/5.2/testing
+7. https://lumen.laravel.com/docs/5.4/testing
 8. https://en.wikipedia.org/wiki/SOLID_(object-oriented_design)
