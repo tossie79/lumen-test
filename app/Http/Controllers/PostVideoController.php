@@ -29,8 +29,7 @@ class PostVideoController extends Controller
             $videoFile = $request->file('File');
             $this->validate($request,[
              'File' => 'required|mimetypes:video/x-ms-asf,video/x-flv,video/mp4,application/x-mpegURL,video/MP2T,video/3gpp,video/quicktime,video/x-msvideo,video/x-ms-wmv,video/avi,video/mpeg',
-            // 'File' => 'required|mimes:mp4,ogx,oga,ogv,ogg,webm'
-           
+                       
             ]);
            if($videoFile->isValid()){
                 $processedFile=$this->videoProcessor->getFileDetails($videoFile);
