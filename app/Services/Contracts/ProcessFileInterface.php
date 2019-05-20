@@ -1,6 +1,6 @@
 <?php
 declare(strict_types=1);
-namespace App\Contracts;
+namespace App\Services\Contracts;
 
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\File\UploadedFile;

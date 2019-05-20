@@ -4,8 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
-use App\Contracts\ProcessFileInterface;
-use App\Contracts\FileAnalyzerInterface;
+use App\Services\Contracts\ProcessFileInterface;
+use App\Services\Contracts\FileAnalyzerInterface;
 
 class PostVideoController extends Controller
 {

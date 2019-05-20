@@ -45,34 +45,6 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        if ($e instanceof ValidationException) 
-        {
-           return response()->json([
-                'message' => 'Validation Error Has Occured'
-            ], 404);
-        }
-
-        if ($e instanceof HttpException) 
-        {
-            return response()->json([
-                'message' => 'An HTTP Error Has Occured: The Page You Are Looking For, Could Not Be Found ',
-            ], 404);
-        }
-
-        if ($e instanceof AuthorizationException) 
-        {
-            return response()->json([
-                'message' => 'Authorization Error Has Occured'
-            ], 404);
-        }
-        if ($exception instanceof ModelNotFoundException) 
-        {
-            return response()->json([
-                'message' => 'Resource not found'
-            ], 404);
-        }
-      
-
         return parent::render($request, $e);
     }
 }

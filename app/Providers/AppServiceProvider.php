@@ -3,8 +3,8 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
-use App\Contracts\ProcessFileInterface;
-use App\Contracts\ FileAnalyzerInterface;
+use App\Services\Contracts\ProcessFileInterface;
+use App\Services\Contracts\ FileAnalyzerInterface;
 use App\Services\ProcessVideoFile;
 use App\Services\Id3FileAnalyzer;
 

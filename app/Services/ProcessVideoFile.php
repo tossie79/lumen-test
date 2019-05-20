@@ -2,7 +2,7 @@
 declare(strict_types=1);
 namespace App\Services;
 
-use App\Contracts\ProcessFileInterface;
+use App\Services\Contracts\ProcessFileInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 

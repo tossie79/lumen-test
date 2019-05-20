@@ -2,7 +2,7 @@
 declare(strict_types=1);
 namespace App\Services;
 
-use App\Contracts\FileAnalyzerInterface;
+use App\Services\Contracts\FileAnalyzerInterface;
 
 use \getID3;
 
