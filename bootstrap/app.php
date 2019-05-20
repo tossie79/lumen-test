@@ -51,7 +51,7 @@ $app->singleton(
 $app->singleton('filesystem', function ($app) {
     return $app->loadComponent('filesystems', 'Illuminate\Filesystem\FilesystemServiceProvider', 'filesystem');
 });
-
+$app->configure('filesystems');
 /*
 |--------------------------------------------------------------------------
 | Register Middleware

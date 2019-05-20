@@ -26,7 +26,7 @@ class ProcessVideoFile implements ProcessFileInterface
     public function __construct()
     {
       
-        $this->setStoragePath('app/videos');
+        $this->setStoragePath('/app/public/videos');
        
     }
 
