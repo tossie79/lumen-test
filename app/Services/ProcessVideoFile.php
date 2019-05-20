@@ -5,14 +5,13 @@ namespace App\Services;
 use App\Services\Contracts\ProcessFileInterface;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 
-
 class ProcessVideoFile implements ProcessFileInterface
 {
     /*
     |--------------------------------------------------------------------------
     | ProcessVideo 
     |--------------------------------------------------------------------------
-    |
+    |The Video file is uploaded and stored
     | 
     | 
     |
@@ -20,7 +19,7 @@ class ProcessVideoFile implements ProcessFileInterface
     
     private $storagePath;
     /**
-    *
+    * Constructor - storage path is set
     *
     **/
     public function __construct()
@@ -31,7 +30,9 @@ class ProcessVideoFile implements ProcessFileInterface
     }
 
     /**
-    *
+    * This method sets the storage path for the uploaded file
+    * @param string
+    * @return void
     *
     **/
 
@@ -42,7 +43,9 @@ class ProcessVideoFile implements ProcessFileInterface
     }
 
     /**
-    *
+    * file is uploaded to the storage location
+    * @param UploadedFile
+    * @return string
     *
     **/
 
@@ -56,7 +59,9 @@ class ProcessVideoFile implements ProcessFileInterface
    
     }
     /**
-    *
+    * returns the storage file path
+    * 
+    * @return string
     *
     **/
 
@@ -65,8 +70,11 @@ class ProcessVideoFile implements ProcessFileInterface
         return storage_path($this->storagePath);
         
     }
+
     /**
-    *
+    * returns the storage file path
+    * 
+    * @return string
     *
     **/
 
@@ -75,8 +83,11 @@ class ProcessVideoFile implements ProcessFileInterface
         return rtrim(app()->basePath('public/' . $this->storagePath), '/');
                
     }
+
     /**
-    *
+    * returns the uploaded file path
+    * @param string
+    * @return string
     *
     **/
     public function getUploadedFilePath(string $file_name):string

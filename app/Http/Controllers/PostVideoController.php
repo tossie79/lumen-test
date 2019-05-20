@@ -9,7 +9,14 @@ use App\Services\Contracts\FileAnalyzerInterface;
 
 class PostVideoController extends Controller
 {
-
+    /*
+    |--------------------------------------------------------------------------
+    | PostVideoController
+    |--------------------------------------------------------------------------
+    |PostVideoController; Uploading of File, Local storage of File and ID3 Analysis of the uploaded file
+    | 
+    |
+    */
     protected $videoProcessor;
     protected $analyzer;
     /**
@@ -23,6 +30,12 @@ class PostVideoController extends Controller
         $this->analyzer = $analyzer;
     }
 
+    /**
+    * File is uploaded and the if usccessfully uploaded, the id3analysis is done and returned as a json *response
+    * @param Request
+    * @return Response
+    *
+    **/
     public function postVideo(Request $request):Response
     {
         if ($request->hasFile('File')) {

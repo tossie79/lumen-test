@@ -3,7 +3,6 @@ declare(strict_types=1);
 namespace App\Services;
 
 use App\Services\Contracts\FileAnalyzerInterface;
-
 use \getID3;
 
 class Id3FileAnalyzer implements FileAnalyzerInterface
@@ -12,14 +11,15 @@ class Id3FileAnalyzer implements FileAnalyzerInterface
     |--------------------------------------------------------------------------
     | FileAnalyzer 
     |--------------------------------------------------------------------------
-    |
+    |This uses the ID3Anlayser and returns the file analysis
     | 
     | 
     |
     */
     private $getId3Instance;
     /**
-    *
+    * constructor 
+    * 
     *
     **/
    
@@ -30,6 +30,9 @@ class Id3FileAnalyzer implements FileAnalyzerInterface
     }
 
     /**
+    * returns the id3analysis of the uploaded file
+    * @param string
+    * @return array
     *
     *
     **/
@@ -48,6 +51,7 @@ class Id3FileAnalyzer implements FileAnalyzerInterface
    /**
     *
     *Initialize getID3 engine
+    * @return void
     **/ 
     public function setInstance()
     {
@@ -55,7 +59,7 @@ class Id3FileAnalyzer implements FileAnalyzerInterface
          $this->getId3Instance = new getID3;
     }
     /**
-    *
+    * This method cleans the array - fixes encoding issue
     *
     **/
     public function utf8ize($mixed) {

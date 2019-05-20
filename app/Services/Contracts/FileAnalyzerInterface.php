@@ -9,7 +9,7 @@ interface FileAnalyzerInterface
     | AnalyzeFile Interface
     |--------------------------------------------------------------------------
     |
-    | 
+    | Method definitions for the ID3 File analyser
     | 
     |
     */
