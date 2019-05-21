@@ -24,7 +24,7 @@ class PostVideoController extends Controller
      *
      * @return void
      */
-    public function __construct(ProcessFileInterface $videoProcessor,FileAnalyzerInterface $analyzer)
+    public function __construct(ProcessFileInterface $videoProcessor, FileAnalyzerInterface $analyzer)
     {
         $this->videoProcessor=$videoProcessor;
         $this->analyzer = $analyzer;
@@ -44,14 +44,12 @@ class PostVideoController extends Controller
              'File' => 'required|mimetypes:video/x-ms-asf,video/x-flv,video/mp4,application/x-mpegURL,video/MP2T,video/3gpp,video/quicktime,video/x-msvideo,video/x-ms-wmv,video/avi,video/mpeg',
                        
             ]);
-           if($videoFile->isValid()){
+            if ($videoFile->isValid()) {
                 $processedFile=$this->videoProcessor->getFileDetails($videoFile);
                 $analyzed = $this->analyzer->analyzeFile($processedFile);
                 return response()->json(['data'=>$analyzed]);
-           
             }
-        }
-        else{
+        } else {
            return response()->json(['data'=>"There is an error with your file, please check file size and type "]);
         }
         

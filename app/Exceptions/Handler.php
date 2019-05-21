@@ -49,14 +49,12 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $e)
     {
-        if ($e instanceof MethodNotAllowedHttpException) 
-        {
+        if ($e instanceof MethodNotAllowedHttpException) {
             return response()->json([
                 'message' => 'Error: That Route Doesnt Exist, Please Check And Try Again'
             ], 404);
         }
-        if ($e instanceof NotFoundHttpException) 
-        {
+        if ($e instanceof NotFoundHttpException) {
             return response()->json([
                 'message' => 'Error: Sorry, the page you are looking for could not be found.'
             ], 404);

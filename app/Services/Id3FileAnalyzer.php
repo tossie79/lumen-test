@@ -38,8 +38,7 @@ class Id3FileAnalyzer implements FileAnalyzerInterface
     **/
     public function analyzeFile(string $filepath):array
     {
-        if(!empty($filepath))
-        {
+        if (!empty($filepath)) {
             $analyzedFile =  $this->getId3Instance->analyze($filepath);
             $cleanedFile = $this->utf8ize($analyzedFile);
             return $cleanedFile;
@@ -55,14 +54,15 @@ class Id3FileAnalyzer implements FileAnalyzerInterface
     **/ 
     public function setInstance()
     {
-       
-         $this->getId3Instance = new getID3;
+       $this->getId3Instance = new getID3;
     }
+    
     /**
     * This method cleans the array - fixes encoding issue
     *
     **/
-    public function utf8ize($mixed) {
+    public function utf8ize($mixed)
+    {
         if (is_array($mixed)) {
             foreach ($mixed as $key => $value) {
                 $mixed[$key] = $this->utf8ize($value);
