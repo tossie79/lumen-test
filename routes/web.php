@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Application Routes
@@ -15,6 +14,6 @@ $router->get('/', function () use ($router) {
     return $router->app->version();
 });
 
-$router->group(['prefix'=>'api/v1'], function() use($router){
-	$router->post('/post-video', ['as' => 'post.video', 'uses' => 'PostVideoController@postVideo']);
+$router->group(['prefix'=>'api/v1'], function () use ($router) {
+    $router->post('/post-video', ['as' => 'post.video', 'uses' => 'PostVideoController@postVideo']);
 });

@@ -7,34 +7,28 @@ use Laravel\Lumen\Testing\DatabaseMigrations;
 use Laravel\Lumen\Testing\DatabaseTransactions;
 use League\Flysystem\Filesystem;
 
-
-
 class PostVideoTest extends TestCase
 {
-   
-
     public function setUp()
     {
         parent::setUp();
-              
     }
-
     /**
-     * Test Route.
-     *
-     * @return void
-     */
+    * Test Route.
+    *
+    * @return void
+    */
     public function testRoute()
     {
-       $response = $this->get('/');
-       $this->assertEquals(200, $this->response->status());
+        $response = $this->get('/');
+        $this->assertEquals(200, $this->response->status());
     }
     
 
     /**
-   * Test File Upload
-   * @method testUploadingVideoFile
-   */
+    * Test File Upload
+    * @method testUploadingVideoFile
+    */
     public function testUploadingVideoFile()
     {
         $this->send_json    = '{"FILE": "Sample_Video.mp4"}';
@@ -50,9 +44,5 @@ class PostVideoTest extends TestCase
         );
         $this->receive_json = json_decode($this->response->getContent());
         $this->assertEquals(200, $this->response->status());
-      
     }
-   
-
-
 }

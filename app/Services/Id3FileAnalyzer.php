@@ -7,28 +7,26 @@ use \getID3;
 
 class Id3FileAnalyzer implements FileAnalyzerInterface
 {
-    /*
-    |--------------------------------------------------------------------------
-    | FileAnalyzer 
-    |--------------------------------------------------------------------------
-    |This uses the ID3Anlayser and returns the file analysis
-    | 
-    | 
-    |
-    */
+/*
+|--------------------------------------------------------------------------
+| FileAnalyzer
+|--------------------------------------------------------------------------
+|This uses the ID3Anlayser and returns the file analysis
+|
+|
+|
+*/
     private $getId3Instance;
-    /**
-    * constructor 
-    * 
-    *
-    **/
-   
+/**
+* constructor
+*
+*
+**/
+  
     public function __construct()
     {
         $this->setInstance();
-              
     }
-
     /**
     * returns the id3analysis of the uploaded file
     * @param string
@@ -43,18 +41,17 @@ class Id3FileAnalyzer implements FileAnalyzerInterface
             $cleanedFile = $this->utf8ize($analyzedFile);
             return $cleanedFile;
         }
-            return ["Error: File could not be analyzed"];
-        
+        return ["Error: File could not be analyzed"];
     }
-    
-   /**
+   
+    /**
     *
     *Initialize getID3 engine
     * @return void
-    **/ 
+    **/
     public function setInstance()
     {
-       $this->getId3Instance = new getID3;
+        $this->getId3Instance = new getID3;
     }
     
     /**
@@ -71,6 +68,5 @@ class Id3FileAnalyzer implements FileAnalyzerInterface
             return mb_convert_encoding($mixed, "UTF-8", "UTF-8");
         }
         return $mixed;
-}
-    
+    }
 }

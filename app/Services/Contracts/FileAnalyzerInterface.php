@@ -4,7 +4,7 @@ namespace App\Services\Contracts;
 
 interface FileAnalyzerInterface
 {
-	/*
+    /*
     |--------------------------------------------------------------------------
     | AnalyzeFile Interface
     |--------------------------------------------------------------------------
@@ -17,6 +17,6 @@ interface FileAnalyzerInterface
     public function setInstance();
     public function analyzeFile(string $file):array;
     public function utf8ize($mixed);
-	
+    
 
 }
